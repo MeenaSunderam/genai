@@ -1,0 +1,6 @@
+credentials:
+  username: AwsUser
+  password: Mavs@4680
+domain:
+  endpoint: https://search-mycomp-internet-ld7zfbva556dtil6dalqf7zray.us-east-1.es.amazonaws.com
+  index: legal-passages
