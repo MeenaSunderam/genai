@@ -45,7 +45,7 @@ endpoint_name_embed = 'jumpstart-example-huggingface-textembed'
 legal_cohere_model = 'cohere-medium'
 
 # Get yaml information
-with open('config.yml', 'r') as file:
+with open('/Users/thandavm/work/strategic_accounts/ai_summit/streamlit/final_demo/config.yml', 'r') as file:
     config = yaml.safe_load(file)
 
 es_username = config['credentials']['username']
@@ -55,8 +55,8 @@ domain_endpoint = config['domain']['endpoint']
 domain_index = config['domain']['index']
 
 region = config['aws']['region']
-ACCESS_KEY = config['aws']['accesskey']
-SECRET_KEY = config['aws']['secretkey']
+ACCESS_KEY = config['aws']['access_key']
+SECRET_KEY = config['aws']['secret_key']
 
 URL = f'{domain_endpoint}/{domain_index}/_search'
 
@@ -127,7 +127,7 @@ def build_embed_table(df_knowledge, endpoint_name_embed, col_name_4_embed, batch
     return res_embed_df
 
 
-df_knowledge = pd.read_csv("Amazon_SageMaker_FAQs.csv", header=None, names=["Question", "Answer"])
+df_knowledge = pd.read_csv("/Users/thandavm/work/strategic_accounts/ai_summit/streamlit/final_demo/Amazon_SageMaker_FAQs.csv", header=None, names=["Question", "Answer"])
 df_knowledge.drop(["Question"], axis=1, inplace=True)
 
 ### Right Column
